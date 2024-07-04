@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Encryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Image Encryption Web Application</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+    </nav>
+    <h2>Encrypt Image</h2>
+    <form action="{{ url_for('encrypt') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Encrypt">
+    </form>
+    <h2>Decrypt Image</h2>
+    <form action="{{ url_for('decrypt') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Decrypt">
+    </form>
+</body>
+
+</html>
