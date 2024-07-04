@@ -11,20 +11,22 @@ This is a Flask web application for encrypting and decrypting images using the `
 
 ## Project Structure
 
-image-encryption-webapp/
-├── static/
-│ ├── css/
-│ │ └── style.css
-│ ├── uploads/
-│ │ └── (uploaded files)
-├── templates/
-│ ├── index.html
-│ ├── encrypt.html
-│ └── decrypt.html
-├── app.py
-├── encryption_key.xlsx
-├── .gitignore
-└── README.md
+
+- **`static/`**: Contains static files for the web application.
+  - **`css/`**: CSS stylesheets for styling web pages.
+    - `style.css`: Custom styles for the application.
+  - **`uploads/`**: Directory where uploaded images are stored temporarily.
+
+- **`templates/`**: HTML templates rendered by Flask for different pages.
+  - `index.html`: Homepage for uploading images.
+  - `encrypt.html`: Page displaying the encrypted image after encryption.
+  - `decrypt.html`: Page for uploading encrypted images and displaying decrypted results.
+
+- **`app.py`**: Flask application script containing routes and logic for encryption and decryption.
+
+- **`encryption_key.xlsx`**: Excel file storing encryption keys and image dimensions.
+
+- **`.gitignore`**: Git ignore file to exclude unnecessary files from version control.
 
 
 ## How to Run
@@ -32,7 +34,7 @@ image-encryption-webapp/
 1. Install the dependencies:
    ```sh
    pip install -r requirements.txt
-
+   
 2. Run the Flask application:
    python app.py
 
@@ -40,9 +42,9 @@ image-encryption-webapp/
 
 # Dependencies
    
-Flask
-cryptography
-pandas
-openpyxl
-matplotlib
-opencv-python   
+- Flask
+- Cryptography
+- Pandas
+- Openpyxl
+- Matplotlib
+- Opencv-python   
